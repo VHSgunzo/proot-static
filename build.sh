@@ -11,8 +11,7 @@ platform_arch="$(uname -m)"
 if [ -x "$(which apt 2>/dev/null)" ]
     then
         apt update && apt install -y \
-            build-essential clang pkg-config git libtalloc-dev uthash-dev \
-            upx curl gdb lcov libarchive-dev sloccount strace swig python3-dev lzop
+            build-essential clang pkg-config git libtalloc-dev uthash-dev upx
 fi
 
 if [ -d build ]
@@ -48,6 +47,7 @@ if [ "$platform" == "Linux" ]
 fi
 
 echo "= building proot"
+rm -fv "$(which python3)"
 pushd proot-${proot_version}
 env CFLAGS="$CFLAGS -g -O2 -Os -ffunction-sections -fdata-sections" \
     LDFLAGS="$LDFLAGS -Wl,--gc-sections" make -C src proot
