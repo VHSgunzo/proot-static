@@ -47,7 +47,7 @@ if [ "$platform" == "Linux" ]
 fi
 
 echo "= building proot"
-rm -fv "$(which python3)"
+rm -fv "$(which python3)" "$(which python3-config)"
 pushd proot-${proot_version}
 env CFLAGS="$CFLAGS -g -O2 -Os -ffunction-sections -fdata-sections" \
     LDFLAGS="$LDFLAGS -Wl,--gc-sections" make -C src proot
