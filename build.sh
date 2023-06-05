@@ -12,7 +12,6 @@ if [ -x "$(which apt 2>/dev/null)" ]
     then
         apt update && apt install -y \
             build-essential clang pkg-config git libtalloc-dev uthash-dev upx
-        apt remove --purge python3 -y
 fi
 
 if [ -d build ]
