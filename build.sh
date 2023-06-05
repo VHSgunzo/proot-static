@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 export MAKEFLAGS="-j$(nproc)"
 
@@ -48,7 +49,7 @@ fi
 echo "= building proot"
 pushd proot-${proot_version}
 env CFLAGS="$CFLAGS -g -O2 -Os -ffunction-sections -fdata-sections" \
-    LDFLAGS="$LDFLAGS -Wl,--gc-sections" make -c src proot
+    LDFLAGS="$LDFLAGS -Wl,--gc-sections" make -C src proot
 popd # proot-${proot_version}
 
 popd # build
