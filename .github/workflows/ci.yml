@@ -9,7 +9,7 @@ on:
 
 jobs:
   build_and_release:
-    name: unionfs-fuse-static
+    name: proot-static
     runs-on: ubuntu-22.04
     permissions:
       contents: write
