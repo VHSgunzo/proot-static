@@ -11,7 +11,8 @@ platform_arch="$(uname -m)"
 if [ -x "$(which apt 2>/dev/null)" ]
     then
         apt update && apt install -y \
-            build-essential clang pkg-config git libtalloc-dev uthash-dev upx
+            build-essential clang pkg-config git libtalloc-dev uthash-dev \
+            upx curl gdb lcov libarchive-dev sloccount strace swig python3-dev lzop
 fi
 
 if [ -d build ]
