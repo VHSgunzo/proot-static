@@ -1,5 +1,5 @@
 # proot-static
-* Statically compiled [proot](https://github.com/proot-me/proot)
+* Statically compiled [proot](https://github.com/proot-me/proot) and ArchLinux package
 ## To get started:
 * **Download the latest revision**
 ```

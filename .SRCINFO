@@ -1,0 +1,18 @@
+pkgbase = proot-me
+	pkgdesc = PRoot is a user-space implementation of chroot, mount --bind, and binfmt_misc without privilege/setup
+	pkgver = 5.4.0.r2.g5f780cb
+	pkgrel = 1
+	url = https://proot-me.github.io
+	arch = any
+	license = GPL
+	makedepends = python-docutils
+	makedepends = libxslt
+	depends = talloc
+	provides = proot
+	conflicts = proot
+	conflicts = proot-bin
+	conflicts = proot-git
+	source = git+https://github.com/proot-me/proot.git
+	sha1sums = SKIP
+
+pkgname = proot-me
